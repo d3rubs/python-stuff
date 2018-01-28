@@ -1,0 +1,8 @@
+month = input("Enter the month: ")
+print("Numbers of months on plan", month)
+if month >= 3:
+    annual_fee = 39.99
+else:
+    annual_fee = 0
+total1 = (month * 14.99) + 1.0 + annual_fee
+print(total1)
