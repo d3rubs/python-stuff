@@ -1,8 +1,18 @@
-month = input("Enter the month: ")
-print("Numbers of months on plan", month)
-if month >= 3:
+month = int(input("Enter the number of months: "))
+startup_fee1 = 1.0
+monthly_fee1 = 14.99
+startup_fee2 = 58.0
+monthly_fee2 = 9.99
+
+if month > 2:
     annual_fee = 39.99
 else:
     annual_fee = 0
-total1 = (month * 14.99) + 1.0 + annual_fee
-print(total1)
+    
+total1 = (month * monthly_fee1) + startup_fee1 + annual_fee
+total2 = (month * monthly_fee2) + startup_fee2 + annual_fee
+monthly_rate_1 = total1 / month
+monthly_rate_2 = total2 / month
+
+print("The total for Plan 1 is", total1, "and your monthly rate is", monthly_rate_1)
+print("The total for Plan 2 is", total2, "and your monthly rate is", monthly_rate_2)
